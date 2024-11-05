@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="scripts/manager.js" defer></script>
+    <script type="module" src="scripts/firebaseConfig.js" defer></script>
+</head>
+<body>
+<h1>Manager Portal</h1>
+<form id="tenantForm">
+    <label for="tenantName">Name:</label>
+    <input type="text" id="tenantName" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="checkIn">Check-in Date:</label>
+    <input type="date" id="checkIn" required>
+
+    <label for="checkOut">Check-out Date:</label>
+    <input type="date" id="checkOut" required>
+
+    <label for="apartment">Apartment Number:</label>
+    <input type="text" id="apartment" required>
+
+    <button type="submit">Add Tenant</button>
+</form>
+<!-- Edit User Modal -->
+<div id="editUserModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">×</span>
+        <h2>Edit Apartment Number</h2>
+        <form id="editApartmentForm">
+            <input type="hidden" id="editUserId">
+            <label for="editApartment">Apartment Number:</label>
+            <input type="text" id="editApartment" required>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+<div id="tenantList">
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenant Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Tenant Portal</h1>
+<form id="maintenanceRequestForm">
+    <label for="apartment">Apartment Number:</label>
+    <input type="text" id="apartment" required>
+
+    <label for="area">Area (e.g., kitchen, bathroom):</label>
+    <input type="text" id="area" required>
+
+    <label for="description">Problem Description:</label>
+    <textarea id="description" required></textarea>
+
+    <label for="photo">Photo (Image Address) (optional):</label>
+    <input type="text" id="photo">
+
+    <button type="submit">Submit Request</button>
+</form>
+
+<script type="module" src="scripts/tenant.js"></script>
+<script type="module" src="scripts/firebaseConfig.js"></script>
+</body>
+</html>

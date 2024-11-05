@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Staff Portal</h1>
+<div id="filters">
+    <label for="filterApartment">Apartment Number:</label>
+    <input type="text" id="filterApartment">
+
+    <label for="filterArea">Area:</label>
+    <input type="text" id="filterArea">
+
+    <label for="filterStatus">Status:</label>
+    <select id="filterStatus">
+        <option value="all">All</option>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+    </select>
+    <label for="dateStart">Start Date Range:</label>
+    <input type="date" id="dateStart" required>
+
+    <label for="dateEnd">End Date Range:</label>
+    <input type="date" id="dateEnd" required>
+
+    <button onclick="renderFilters()">Add Filter</button>
+</div>
+<div id="requestsList"></div>
+<div id="editStatusModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">×</span>
+        <h2>Edit Status (Mark as Completed)</h2>
+        <form id="editStatusForm">
+            <input type="hidden" id="editUserId">
+            <label for="editStatus">Status:</label>
+            <input type="text" id="editStatus" required>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</div>
+<script type="module" src="scripts/staff.js"></script>
+<script type="module" src="scripts/firebaseConfig.js"></script>
+</body>
+</html>
